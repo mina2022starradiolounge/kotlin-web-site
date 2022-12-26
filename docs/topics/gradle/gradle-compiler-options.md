@@ -78,19 +78,26 @@ It is also possible to configure all of the Kotlin compilation tasks in the proj
 <tab title="Kotlin" group-key="kotlin">
 
 ```kotlin
-tasks.withType<org.jetbrains.kotlin.gradle.dsl.KotlinCompile>().configureEach {
-    kotlinOptions { /*...*/ }
-}
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
+// ...
+
+val compileKotlin: KotlinCompilationTask<*> by tasks
+
+compileKotlin.compilerOptions { /*...*/ }
 ```
 
 </tab>
 <tab title="Groovy" group-key="groovy">
 
 ```groovy
-tasks.withType(org.jetbrains.kotlin.gradle.dsl.KotlinCompile).configureEach {
-    kotlinOptions { /*...*/ }
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
+// ...
+
+tasks.named('compileKotlin', KotlinCompilationTask) {
+    compilerOptions { /*...*/ }
 }
 ```
+
 </tab>
 </tabs>
 

@@ -187,18 +187,24 @@ artifact. To make it work, pass one or multiple base paths of source files as an
 <tab title="Kotlin" group-key="kotlin">
 
 ```kotlin
-tasks.withType(org.jetbrains.kotlin.gradle.dsl.KotlinCompile::class).configureEach {
-    // $base is a base path of source files
-    kotlinOptions.freeCompilerArgs += "-Xklib-relative-path-base=$base"
-}
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
+// ...
+
+val compileKotlin: KotlinCompilationTask<*> by tasks
+
+// $base is a base path of source files
+compileKotlin.compilerOptions.freeCompilerArgs.add("-Xklib-relative-path-base=$base")
 ```
 
 </tab>
 <tab title="Groovy" group-key="groovy">
 
 ```groovy
-tasks.withType(org.jetbrains.kotlin.gradle.dsl.KotlinCompile).configureEach {
-    kotlinOptions {
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
+// ...
+
+tasks.named('compileKotlin', KotlinCompilationTask) {
+    compilerOptions {
         // $base is a base path of source files
         freeCompilerArgs += "-Xklib-relative-path-base=$base"
     }

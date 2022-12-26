@@ -142,18 +142,24 @@ If you build your module with Gradle, you can add arguments like this:
 <tab title="Kotlin" group-key="kotlin">
 
 ```kotlin
-tasks.withType<org.jetbrains.kotlin.gradle.dsl.KotlinCompile>().configureEach {
-    kotlinOptions.freeCompilerArgs += "-opt-in=org.mylibrary.OptInAnnotation"
-}
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
+// ...
+
+val compileKotlin: KotlinCompilationTask<*> by tasks
+
+compileKotlin.compilerOptions.freeCompilerArgs.add("-opt-in=org.mylibrary.OptInAnnotation")
 ```
 
 </tab>
 <tab title="Groovy" group-key="groovy">
 
 ```groovy
-tasks.withType(org.jetbrains.kotlin.gradle.dsl.KotlinCompile).configureEach {
-    kotlinOptions {
-        freeCompilerArgs += "-opt-in=org.mylibrary.OptInAnnotation"
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
+// ...
+
+tasks.named('compileKotlin', KotlinCompilationTask) {
+    compilerOptions {
+        freeCompilerArgs.add("-opt-in=org.mylibrary.OptInAnnotation")
     }
 }
 ```
