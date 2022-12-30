@@ -206,7 +206,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompilationTask
 tasks.named('compileKotlin', KotlinCompilationTask) {
     compilerOptions {
         // $base is a base path of source files
-        freeCompilerArgs += "-Xklib-relative-path-base=$base"
+        freeCompilerArgs.add("-Xklib-relative-path-base=$base")
     }
 }
 ``` 
