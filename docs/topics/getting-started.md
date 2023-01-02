@@ -1,6 +1,6 @@
 [//]: # (title: Get started with Kotlin)
 
-[Kotlin](https://kotlinlang.org) is a modern but already mature programming language aimed to make developers happier.
+[Kotlin](https://kotlinlang.org) is a modern but already mature programming language designed to make developers happier.
 It's concise, safe, interoperable with Java and other languages, and provides many ways to reuse code between multiple platforms for productive programming.
 
 Pick it up to start building powerful applications!
@@ -11,19 +11,20 @@ Pick it up to start building powerful applications!
   Kotlin's [basic syntax](basic-syntax.md).
 * If Kotlin is your first programming language, we recommend starting with the [Atomic Kotlin book](https://www.atomickotlin.com/atomickotlin/)
 or signing up for the free [Kotlin Basics track](https://hyperskill.org/join/fromdocstoJetSalesStat?redirect=true&next=/tracks/18) on JetBrains Academy.
+* For a complete list of all learning materials, see [Learning materials overview](learning-materials-overview.md).
 
 ## Install Kotlin
 
-Kotlin is included in each [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) and [Android Studio](https://developer.android.com/studio) release.  
+Kotlin is included in each [IntelliJ IDEA](https://www.jetbrains.com/idea/download/) and [Android Studio](https://developer.android.com/studio) release.
 Download and install one of these IDEs to start using Kotlin.
 
-## Get started with Kotlin on your platform
+## Start developing
+Choose what you want to work on from the list below:
  
-* [Kotlin Multiplatform Mobile](multiplatform-mobile-getting-started.md)
-* [Kotlin for Android](https://developer.android.com/kotlin)
-* [Kotlin for JVM](jvm-get-started.md)
-* [Kotlin Native](native-get-started.md)
-* [Kotlin for multiplatform libraries](multiplatform-library.md)
+* [Create an Android and iOS app](multiplatform-mobile-getting-started.md)
+* [Create an Android app with Google](https://developer.android.com/kotlin)
+* [Create a backend app](jvm-spring-boot-restful.md)
+* [Create a multiplatform library](multiplatform-library.md)
 
 ## Is anything missing?
 
