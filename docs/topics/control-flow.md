@@ -6,30 +6,57 @@ In Kotlin, `if` is an expression: it returns a value.
 Therefore, there is no ternary operator (`condition ? then : else`) because ordinary `if` works fine in this role.
 
 ```kotlin
-var max = a 
-if (a < b) max = b
+val tax: Int
+val value = 50
+
+if (value < 100) tax = 10
 
 // With else 
-var max: Int
-if (a > b) {
-    max = a
+val tax: Int
+val value = 50
+
+if (value < 10) {
+    tax = 1
 } else {
-    max = b
+    tax = 10
 }
  
 // As expression 
-val max = if (a > b) a else b
+val tax = if (value < 10) 1 else 10
+
+// With else if
+val tax: Int
+val value = 50
+
+if (value < 10) {
+  tax = 1
+} else if (value < 100) {
+  tax = 10
+} else if (value < 1000) {
+  tax = 30
+} else {
+  tax = 50
+}
+
+// As expression
+val tax = if (value < 10) 1 else if (value < 100) 10 else if (value < 1000) 30 else 50 
 ```
 
 Branches of an `if` expression can be blocks. In this case, the last expression is the value of a block:
 
 ```kotlin
-val max = if (a > b) {
-    print("Choose a")
-    a
+val tax = if (value < 10) {
+    print("Tax is 1%")
+    1
+} else if (value < 100) {
+    print("Tax is 10%")
+    10
+} else if (value < 1000) { 
+    print("Tax is 30%")
+    30
 } else {
-    print("Choose b")
-    b
+    print("Tax is 50%")
+    50
 }
 ```
 
