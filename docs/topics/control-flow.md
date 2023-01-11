@@ -32,14 +32,12 @@ if (value < 10) {
   tax = 1
 } else if (value < 100) {
   tax = 10
-} else if (value < 1000) {
-  tax = 30
 } else {
   tax = 50
 }
 
 // As expression
-val tax = if (value < 10) 1 else if (value < 100) 10 else if (value < 1000) 30 else 50 
+val tax = if (value < 10) 1 else if (value < 100) 10 else 50 
 ```
 
 Branches of an `if` expression can be blocks. In this case, the last expression is the value of a block:
@@ -51,9 +49,6 @@ val tax = if (value < 10) {
 } else if (value < 100) {
     print("Tax is 10%")
     10
-} else if (value < 1000) { 
-    print("Tax is 30%")
-    30
 } else {
     print("Tax is 50%")
     50
