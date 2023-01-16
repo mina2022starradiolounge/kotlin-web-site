@@ -11,20 +11,7 @@ val value = 50
 
 if (value < 100) tax = 10
 
-// With else 
-val tax: Int
-val value = 50
-
-if (value < 10) {
-    tax = 1
-} else {
-    tax = 10
-}
- 
-// As expression 
-val tax = if (value < 10) 1 else 10
-
-// With else if
+// With else if and else
 val tax: Int
 val value = 50
 
